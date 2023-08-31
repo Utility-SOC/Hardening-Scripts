@@ -12,7 +12,8 @@ def main():
     while kibana_files:
         for idx, f in enumerate(kibana_files[:9], 1):
             print(f"{idx}: {f}")
-            subprocess.run(f"tail -n 4 {f}", shell=True)
+            subprocess.run(f"tail -n 4 {f}", shell=True)  # Ensure this line ends properly
+
 
         selection = input("Select a file by number or enter '0' for next set: ")
         if selection == '0':
